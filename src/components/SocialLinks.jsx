@@ -17,52 +17,86 @@ import { SiLeetcode } from 'react-icons/si'
  */
 const SocialLinks = () => {
   return (
-    // fixed position at left, aligned with navbar height; z-50 ensures it sits on top of other content.
-    <div className="fixed top-20 left-4 flex flex-col items-center gap-6 z-50">
-      {/* GitHub Icon */}
-      <a
-        href="https://github.com/mc-solo" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-300 hover:text-cyan-400 transition-colors"
-      >
-        <FaGithub size={34} />
-      </a>
-      {/* Vertical line between icons */}
-
-
-      {/* LinkedIn Icon */}
-      <a
-        href="https://linkedin.com/in/yourprofile"  // Replace with your LinkedIn profile URL.
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-300 hover:text-cyan-400 transition-colors"
-      >
-        <FaLinkedin size={34} />
-      </a>
-
-
-      {/* YouTube Icon */}
-      <a
-        href="https://youtube.com/yourchannel"  // Replace with your YouTube channel URL.
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-300 hover:text-cyan-400 transition-colors"
-      >
-        <FaYoutube size={34} />
-      </a>
-
-
-      {/* LeetCode Icon */}
-      <a
-        href="https://leetcode.com/yourusername"  // Replace with your LeetCode profile URL.
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-300 hover:text-cyan-400 transition-colors"
-      >
-        <SiLeetcode size={34} />
-      </a>
-    </div>
+    <>
+      {/* Vertical sidebar for md and up */}
+      <div className="fixed top-20 left-6 flex-col items-center gap-6 z-50 hidden md:flex">
+        <a
+          href="https://github.com/mc-solo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="GitHub"
+        >
+          <FaGithub size={34} />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin size={34} />
+        </a>
+        <a
+          href="https://youtube.com/yourchannel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="YouTube"
+        >
+          <FaYoutube size={34} />
+        </a>
+        <a
+          href="https://leetcode.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="LeetCode"
+        >
+          <SiLeetcode size={34} />
+        </a>
+      </div>
+      {/* Horizontal bar for small screens */}
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex gap-8 z-50 md:hidden bg-gray-900/80 rounded-full px-6 py-2 shadow-lg">
+        <a
+          href="https://github.com/mc-solo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="GitHub"
+        >
+          <FaGithub size={28} />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin size={28} />
+        </a>
+        <a
+          href="https://youtube.com/yourchannel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="YouTube"
+        >
+          <FaYoutube size={28} />
+        </a>
+        <a
+          href="https://leetcode.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="LeetCode"
+        >
+          <SiLeetcode size={28} />
+        </a>
+      </div>
+    </>
   )
 }
 

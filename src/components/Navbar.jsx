@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 
@@ -26,8 +25,8 @@ const Navbar = () => {
           : 'backdrop-blur-lg bg-opacity-40'
       } `}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="px-4 w-full">
+        <div className="flex items-center justify-between h-16 max-w-[2000px]">
           <Link
             to={'/'}
             spy={true}
@@ -42,7 +41,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <Link
                 key={item.target}
-                activeClass="!text-cyan-400"
+                activeClass="!text-white"
                 to={item.target}
                 spy={true}
                 smooth={true}
@@ -56,7 +55,7 @@ const Navbar = () => {
             <a
               href="/CV.pdf"
               download
-              className="px-4 py-2 bg-cyan-400 text-darkblue font-semibold rounded hover:bg-cyan-500 transition-colors duration-300"
+              className="px-4 py-2 bg-gray-700 text-white font-semibold rounded hover:bg-gray-600 transition-colors duration-300"
             >
               Get CV
             </a>
@@ -112,7 +111,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               onClick={() => setIsMenuOpen(false)}
-              className="text-2xl font-medium text-gray-100 hover:text-cyan-400 transition-all duration-300"
+              className="text-2xl font-medium text-gray-100 hover:text-white transition-all duration-300"
             >
               {item.name}
             </Link>
@@ -121,7 +120,7 @@ const Navbar = () => {
             href="/CV.pdf"
             download
             onClick={() => setIsMenuOpen(false)}
-            className="mt-4 px-8 py-3 bg-cyan-400 text-darkblue font-semibold rounded-lg hover:bg-cyan-500 transition-colors duration-300"
+            className="mt-4 px-8 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors duration-300"
           >
             Get CV
           </a>

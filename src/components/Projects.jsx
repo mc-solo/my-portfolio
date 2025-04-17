@@ -32,9 +32,9 @@ const ProjectCard = ({ project, index }) => (
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.2 }}
-    className="relative group bg-gray-900/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+    className="relative group bg-gray-900/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300"
   >
-    <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-gray-500/20 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     
     <div className="relative z-10">
       {/* Folder Icon */}
@@ -64,7 +64,7 @@ const ProjectCard = ({ project, index }) => (
             key={tech}
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
-            className="px-3 py-1 text-sm bg-gray-800/50 rounded-full text-cyan-300"
+            className="px-3 py-1 text-sm bg-gray-800/50 rounded-full text-gray-300"
           >
             {tech}
           </motion.span>
@@ -76,7 +76,7 @@ const ProjectCard = ({ project, index }) => (
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors"
+          className="flex items-center text-gray-400 hover:text-white transition-colors"
         >
           <FiGithub className="mr-2" /> Code
         </a>
@@ -95,8 +95,8 @@ const ProjectCard = ({ project, index }) => (
 
 const Projects = () => {
   return (
-    <section className="container mx-auto py-20 px-4 bg-gray-900">
-      <div className="max-w-7xl mx-auto">
+    <section className="container mx-auto py-20 px-4">
+      <div className="w-full">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
