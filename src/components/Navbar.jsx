@@ -99,7 +99,7 @@ const Navbar = () => {
         ></div>
 
         <div
-          className={`relative h-full flex flex-col justify-center items-center gap-8 transform transition-all duration-300 ease-in-out ${
+          className={`relative h-screen flex flex-col justify-center items-center gap-8 transform transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'opacity-100' : 'opacity-0 -translate-y-4'
           }`}
         >
