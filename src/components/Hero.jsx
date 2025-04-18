@@ -2,162 +2,154 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-/**
- * Hero Component
- *
- * This component displays the landing (home/about) section of your portfolio.
- * It includes your name, a personal intro, and your portrait with a grayscale hover effect.
- */
 const Hero = () => {
+  const skills = [
+    'PHP/Laravel', 'Node.js/Express', 'Java/Spring Boot',
+    'MongoDB/PostgreSQL', 'RESTful APIs', 'GraphQL',
+    'Microservices', 'Docker/Kubernetes', 
+    'Flutter/Dart', 'Firebase',
+     'System Architecture'
+  ]
+
   return (
-    <div className="container mx-auto py-20 px-4">
-      <div className="w-full space-y-12">
-        {/* Left section with text */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+    <div className="container mx-auto py-20 px-4 lg:px-8">
+      <div className="w-full space-y-16">
+        {/* Main Content Section */}
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Text Content */}
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex-1 space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 space-y-8 lg:space-y-10"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-200">
-              Wondwosen Asegid
-            </h1>
-            <h2 className="text-xl md:text-2xl font-medium text-gray-300">
-              Full Stack Developer & System Architecture Enthusiast
-            </h2>
-            <p className="text-lg text-gray-400 leading-relaxed">
-              I'm a passionate developer with a strong foundation in both frontend and backend technologies. My journey in tech has been driven by a deep curiosity for building scalable systems and creating impactful solutions.
+            <div className="space-y-4">
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="text-lg text-emerald-400 font-mono"
+              >
+                Hi, I'm
+              </motion.p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 leading-tight">
+                Wondwosen 
+                <span className="text-emerald-400">Asegid</span>
+              </h1>
+              <h2 className="text-xl md:text-2xl font-medium text-gray-300 bg-gradient-to-r from-emerald-400/20 to-transparent p-4 rounded-lg">
+                Software Developer & Systems Architecture Enthusiast
+              </h2>
+            </div>
+
+            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
+              I'm obsessed with creating software that makes a meaningful difference in people's lives. I'm driven by a passion to build innovative systems that solve real-world problems and make a tangible impact. I'm always looking for the next big idea that can empower people and organizations, and I'm addicted to bringing that vision to life.
             </p>
 
+            <div className="flex gap-4 justify-center md:justify-center lg:justify-start">
+              <motion.a
+                whileHover={{ y: -2 }}
+                className="px-6 py-3 bg-emerald-400/90 hover:bg-emerald-400 text-gray-900 rounded-lg font-semibold transition-colors"
+                href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const projectsSection = document.querySelector('#projects');
+                  if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                View Projects
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -2 }}
+                className="px-6 py-3 border border-emerald-400/50 hover:border-emerald-400 text-emerald-400 rounded-lg font-semibold transition-colors"
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactSection = document.querySelector('#contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Contact Me
+              </motion.a>
+            </div>
           </motion.div>
 
-          {/* Right section with image */}
-
+          {/* Image Section */}
           <motion.div
-
-            initial={{ opacity: 0, scale: 0.8 }}
-
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-
-            transition={{ duration: 0.5 }}
-
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative group"
           >
-
-            <img
-
-              src="/my_portrait.JPG"
-
-              alt="Wondwosen Asegid"
-
-              className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-lg filter grayscale hover:filter-none transition duration-500 border-2 border-gray-700"
-
-            />
-
+            <div className="absolute inset-0 bg-emerald-400/20 blur-3xl rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
+            <div className="relative overflow-hidden rounded-2xl w-64 h-64 lg:w-72 lg:h-72 border-4 border-emerald-400/20 hover:border-emerald-400/40 transition-all duration-500">
+              <div className="absolute inset-0 bg-emerald-500/30 mix-blend-color group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
+              <img
+                src="/my_portrait.JPG"
+                alt="Wondwosen Asegid"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
-
         </div>
 
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent" />
 
+        {/* Details Section */}
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Background */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="space-y-6"
+          >
+            <h3 className="text-2xl font-semibold text-gray-100 flex items-center gap-3">
+              <span className="text-emerald-400">#</span>
+              Personal Background
+            </h3>
+            <div className="space-y-4 text-gray-400">
+              <p className="leading-relaxed text-xl">
+                I've been actively coding since grade 9, when a brilliant mentor named Nazrawi Eyob introduced me to Java during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
+              </p>
+              <p className="leading-relaxed text-xl">
+                After high school, I enrolled at Addis Ababa Science and Technology University but ultimately left when I couldn't secure a place in the software engineering department. Determined to pursue my passion, I've since built an extensive portfolio of projects while continuing my education as a third-year Computer Science student, focusing on practical development skills and innovative solutions.
+              </p>
+            </div>
+          </motion.div>
 
-        {/* Background section */}
-
-        <motion.div
-
-          initial={{ opacity: 0, y: 20 }}
-
-          animate={{ opacity: 1, y: 0 }}
-
-          transition={{ duration: 0.5, delay: 0.2 }}
-
-          className="space-y-6 max-w-3xl"
-
-        >
-
-          <h3 className="text-2xl font-semibold text-gray-200">
-
-            Background
-
-          </h3>
-
-          <div className="space-y-4 text-gray-400">
-
-            <p className="leading-relaxed">
-
-              With a background in Computer Science and a focus on modern web technologies, I specialize in building robust and user-centric applications. I'm particularly interested in system architecture, API design, and creating seamless user experiences.
-
+          {/* Skills */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="space-y-6"
+          >
+            <h3 className="text-2xl font-semibold text-gray-100 flex items-center gap-3">
+              <span className="text-emerald-400">#</span>
+             My Technical Arsenal
+            </h3>
+            <p className="leading-relaxed text-gray-400 mb-4 text-xl">
+              I primarily focus on the logical components of projects, specializing in backend development where I excel at creating robust, scalable systems. While I have some experience with frontend technologies, my true passion lies in building the powerful engines that drive applications behind the scenes, bringing my backend solutions to life.
             </p>
-
-            <p className="leading-relaxed">
-
-              Currently, I'm focused on full-stack development, working with technologies like React, Node.js, and various cloud platforms. I'm passionate about clean code, performance optimization, and implementing best practices in software development.
-
-            </p>
-
-          </div>
-
-        </motion.div>
-
-
-
-        {/* Skills section */}
-
-        <motion.div
-
-          initial={{ opacity: 0, y: 20 }}
-
-          animate={{ opacity: 1, y: 0 }}
-
-          transition={{ duration: 0.5, delay: 0.4 }}
-
-          className="space-y-4"
-
-        >
-
-          <h3 className="text-2xl font-semibold text-gray-200">
-
-            Core Skills
-
-          </h3>
-
-          <div className="flex flex-wrap gap-3">
-
-            {[
-
-              'JavaScript/TypeScript',
-
-              'React.js',
-
-              'Node.js',
-
-              'Python',
-
-              'SQL/NoSQL',
-
-              'System Design',
-
-              'API Development',
-
-              'Cloud Services',
-
-              'DevOps'
-
-            ].map((skill) => (
-
-              <span key={skill} className="px-4 py-2 bg-gray-800/50 rounded-full text-gray-300 text-sm">
-
-                {skill}
-
-              </span>
-
-            ))}
-
-          </div>
-
-        </motion.div>
-
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill) => (
+                <motion.span 
+                  key={skill}
+                  whileHover={{ scale: 1.05 }}
+                  className="px-4 py-2 bg-gray-800 hover:bg-emerald-400/10 rounded-full text-gray-300 text-sm border border-emerald-400/20 hover:border-emerald-400/40 transition-colors"
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
-
     </div>
   )
 }

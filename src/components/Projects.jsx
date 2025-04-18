@@ -70,7 +70,7 @@ const ProjectCard = ({ project, index }) => (
         {project.title}
       </h3>
       
-      <p className="text-gray-400 mb-4">{project.description}</p>
+      <p className="text-gray-400 mb-4 text-xl">{project.description}</p>
       
       <div className="flex flex-wrap gap-2 mb-6">
         {project.tech.map((tech) => (
@@ -78,7 +78,7 @@ const ProjectCard = ({ project, index }) => (
             key={tech}
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
-            className="px-3 py-1 text-sm bg-gray-800/50 rounded-full text-gray-300"
+            className="px-3 py-1 text-sm bg-gray-800 hover:bg-emerald-400/10 rounded-full text-gray-300 border border-emerald-400/20 hover:border-emerald-400/40 transition-colors"
           >
             {tech}
           </motion.span>
@@ -90,7 +90,7 @@ const ProjectCard = ({ project, index }) => (
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-white transition-colors"
+          className="flex items-center text-gray-400 hover:text-emerald-400 transition-colors"
         >
           <FiGithub className="mr-2" /> Code
         </a>
@@ -98,7 +98,7 @@ const ProjectCard = ({ project, index }) => (
           href={project.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-purple-400 transition-colors"
+          className="flex items-center text-gray-400 hover:text-emerald-400 transition-colors"
         >
           <FiExternalLink className="mr-2" /> Demo
         </a>
@@ -111,8 +111,8 @@ const FilterButton = ({ label, isActive, onClick }) => (
   <button
     onClick={onClick}
     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive 
-      ? 'bg-gray-700 text-white' 
-      : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'}`}
+      ? 'bg-emerald-400/90 text-gray-900' 
+      : 'bg-gray-800 text-gray-400 border border-emerald-400/20 hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-400'}`}
   >
     {label}
   </button>
@@ -153,10 +153,10 @@ const Projects = () => {
           animate={{ opacity: 1 }}
           className="max-w-3xl mx-auto mb-10 text-center text-gray-400"
         >
-          <p className="mb-3">
+          <p className="mb-3 text-xl">
             The projects displayed here are personal demos created during my free time and weekends to showcase my technical skills and capabilities.
           </p>
-          <p>
+          <p className="text-xl">
             While I've developed numerous professional projects for governments, NGOs, and private clients, those codebases cannot be shared due to non-disclosure agreements. 
             These demo projects, although not in production, demonstrate my expertise and approach to software development.
           </p>

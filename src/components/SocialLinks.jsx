@@ -24,7 +24,7 @@ const SocialLinks = () => {
           href="https://github.com/mc-solo"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="GitHub"
         >
           <FaGithub size={34} />
@@ -33,7 +33,7 @@ const SocialLinks = () => {
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="LinkedIn"
         >
           <FaLinkedin size={34} />
@@ -42,7 +42,7 @@ const SocialLinks = () => {
           href="https://youtube.com/yourchannel"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="YouTube"
         >
           <FaYoutube size={34} />
@@ -51,7 +51,7 @@ const SocialLinks = () => {
           href="https://leetcode.com/yourusername"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="LeetCode"
         >
           <SiLeetcode size={34} />
@@ -63,7 +63,7 @@ const SocialLinks = () => {
           href="https://github.com/mc-solo"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="GitHub"
         >
           <FaGithub size={28} />
@@ -72,7 +72,7 @@ const SocialLinks = () => {
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="LinkedIn"
         >
           <FaLinkedin size={28} />
@@ -81,7 +81,7 @@ const SocialLinks = () => {
           href="https://youtube.com/yourchannel"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="YouTube"
         >
           <FaYoutube size={28} />
@@ -90,7 +90,7 @@ const SocialLinks = () => {
           href="https://leetcode.com/yourusername"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-gray-300 hover:text-emerald-400 transition-colors"
           aria-label="LeetCode"
         >
           <SiLeetcode size={28} />
