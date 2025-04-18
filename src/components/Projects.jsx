@@ -1,5 +1,5 @@
 // src/components/Projects.jsx
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 
@@ -8,6 +8,7 @@ const projects = [
     title: 'Distributed Task Scheduler',
     description: 'A scalable backend system for distributed task scheduling and execution',
     tech: ['Go', 'Kubernetes', 'Redis', 'PostgreSQL'],
+    languages: ['Go'],
     github: '#',
     demo: '#'
   },
@@ -15,6 +16,7 @@ const projects = [
     title: 'Real-Time Data Pipeline',
     description: 'High-throughput data processing pipeline with fault-tolerant architecture',
     tech: ['Apache Kafka', 'Flink', 'Java', 'Cassandra'],
+    languages: ['Java'],
     github: '#',
     demo: '#'
   },
@@ -22,10 +24,22 @@ const projects = [
     title: 'Serverless API Gateway',
     description: 'A lightweight serverless gateway for managing microservices communication',
     tech: ['AWS API Gateway', 'Lambda', 'Node.js', 'DynamoDB'],
+    languages: ['JavaScript', 'Node.js'],
     github: '#',
     demo: '#'
   },
 ]
+
+// Get all unique programming languages from projects
+const getAllLanguages = () => {
+  const languageSet = new Set();
+  projects.forEach(project => {
+    if (project.languages) {
+      project.languages.forEach(language => languageSet.add(language));
+    }
+  });
+  return Array.from(languageSet).sort();
+};
 
 const ProjectCard = ({ project, index }) => (
   <motion.div 
@@ -93,7 +107,36 @@ const ProjectCard = ({ project, index }) => (
   </motion.div>
 )
 
+const FilterButton = ({ label, isActive, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive 
+      ? 'bg-gray-700 text-white' 
+      : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'}`}
+  >
+    {label}
+  </button>
+);
+
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState(null);
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+  
+  const languages = getAllLanguages();
+  
+  useEffect(() => {
+    if (activeFilter === null) {
+      setFilteredProjects(projects);
+      return;
+    }
+    
+    const filtered = projects.filter(project => {
+      return project.languages && project.languages.includes(activeFilter);
+    });
+    
+    setFilteredProjects(filtered);
+  }, [activeFilter]);
+
   return (
     <section className="container mx-auto py-20 px-4">
       <div className="w-full">
@@ -104,15 +147,60 @@ const Projects = () => {
         >
           Projects
         </motion.h2>
-
-        <AnimatePresence>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} index={index} />
+        
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="max-w-3xl mx-auto mb-10 text-center text-gray-400"
+        >
+          <p className="mb-3">
+            The projects displayed here are personal demos created during my free time and weekends to showcase my technical skills and capabilities.
+          </p>
+          <p>
+            While I've developed numerous professional projects for governments, NGOs, and private clients, those codebases cannot be shared due to non-disclosure agreements. 
+            These demo projects, although not in production, demonstrate my expertise and approach to software development.
+          </p>
+        </motion.div>
+        
+        <div className="mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            <FilterButton 
+              key="all"
+              label="All Projects" 
+              isActive={activeFilter === null} 
+              onClick={() => setActiveFilter(null)} 
+            />
+            {languages.map(language => (
+              <FilterButton 
+                key={language}
+                label={language} 
+                isActive={activeFilter === language} 
+                onClick={() => setActiveFilter(language)} 
+              />
             ))}
           </div>
-        </AnimatePresence>
+        </div>
 
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={activeFilter || 'all'}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((project, index) => (
+                <ProjectCard key={project.title} project={project} index={index} />
+              ))
+            ) : (
+              <div className="col-span-full text-center py-10 text-gray-400">
+                No projects match the selected filter.
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   )
