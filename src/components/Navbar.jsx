@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
+import IconLogo from './logo'
 
+/**
+ * Navbar component: fixed at top, changes blur on scroll,
+ * and toggles a mobile menu.
+ */
 const Navbar = () => {
+  // isMenuOpen: controls mobile overlay menu visibility (true = open)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
+  // isScrolled: tracks whether window.scrollY > 50 to adjust styling
   const [isScrolled, setIsScrolled] = useState(false)
 
+  // Listen to scroll once on mount, clean up on unmount
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // List of in‑page scroll targets
   const navItems = [
     { name: 'Projects', target: 'projects' },
     { name: 'Experience', target: 'experience' },
@@ -21,31 +31,32 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? 'backdrop-blur-xl bg-opacity-80'
-          : 'backdrop-blur-lg bg-opacity-40'
-      } `}
+          ? 'backdrop-blur-xl bg-gray-900/80'
+          : 'backdrop-blur-lg bg-gray-900/40'
+      }`}
     >
       <div className="px-4 w-full">
-        <div className="flex items-center justify-between h-16 max-w-[2000px]">
+        <div className="flex items-center justify-between h-16 max-w-[2000px] mx-auto">
+          {/* Logo: scrolls to top (to="home"), sized & colored here */}
           <Link
-            to={'/'}
-            spy={true}
-            smooth={true}
-            className="text-2xl md:pl-4 font-bold cursor-pointer text-white animate-gradient-x flex items-center"
+            to="home"           // scroll target: an element with name or id="home"
+            spy={true}          // adds activeClass when in view
+            smooth={true}       // smooth scroll animation
+            className="cursor-pointer"
           >
-            WA
+            <IconLogo className="h-10 w-10 mt-2 pl-1 text-emerald-400" />
           </Link>
 
-          {/* Desktop nav */}
+          {/* Desktop nav links */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.target}
-                activeClass="!text-white"
-                to={item.target}
+                activeClass="!text-white"   // tailwind override when active
+                to={item.target}            // scroll target
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-70}                // account for fixed navbar height
                 className="relative cursor-pointer text-gray-300 hover:text-emerald-400 transition-all duration-300 group"
               >
                 {item.name}
@@ -61,7 +72,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Modern hamburger button */}
+          {/* Mobile hamburger */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden mr-4 relative w-10 h-10 focus:outline-none z-[100]"
@@ -93,11 +104,13 @@ const Navbar = () => {
           isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
+        {/* backdrop to close menu when clicking outside */}
         <div
-          className="absolute inset-0 bg-darkblue/95"
+          className="absolute inset-0 bg-black/60"
           onClick={() => setIsMenuOpen(false)}
         ></div>
 
+        {/* menu items */}
         <div
           className={`relative h-screen flex flex-col justify-center bg-gray-900 items-center gap-8 transform transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'opacity-100' : 'opacity-0 -translate-y-4'

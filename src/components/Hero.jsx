@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const Hero = () => {
   const skills = [
     'PHP/Laravel', 'Node.js/Express', 'Java/Spring Boot',
-    'MongoDB/PostgreSQL', 'RESTful APIs', 'GraphQL',
+    'PostgreSQL', 'RESTful APIs', 'GraphQL',
     'Microservices', 'Docker/Kubernetes', 
     'Flutter/Dart', 'Firebase',
      'System Architecture'
@@ -79,21 +79,27 @@ const Hero = () => {
 
           {/* Image Section */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative group"
-          >
-            <div className="absolute inset-0 bg-emerald-400/20 blur-3xl rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
-            <div className="relative overflow-hidden rounded-2xl w-64 h-64 lg:w-72 lg:h-72 border-4 border-emerald-400/20 hover:border-emerald-400/40 transition-all duration-500">
-              <div className="absolute inset-0 bg-emerald-500/30 mix-blend-color group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
-              <img
-                src="/my_portrait.JPG"
-                alt="Wondwosen Asegid"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </motion.div>
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  className="relative flex justify-center items-center"
+>
+  <div className="relative overflow-hidden rounded-2xl w-64 h-64 lg:w-72 lg:h-72 group">
+    {/* Border effect (pseudo ::after) */}
+    <div className="absolute top-3.5 left-3.5 w-full h-full border-2 border-emerald-400 rounded-2xl z-0 transition-transform duration-300 group-hover:translate-x-2 group-hover:translate-y-2 pointer-events-none"></div>
+    {/* Main wrapper */}
+    <div className="relative w-full h-full rounded-2xl bg-emerald-400 shadow-lg overflow-hidden transition-transform duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1">
+      {/* Overlay blend (pseudo ::before) */}
+      <div className="absolute inset-0 bg-gray-900/80 mix-blend-screen rounded-2xl pointer-events-none"></div>
+      <img
+        src="/my_portrait.JPG"
+        alt="Wondwosen Asegid"
+        className="img block w-full h-full object-cover rounded-2xl grayscale contrast-125 mix-blend-multiply transition-all duration-300 group-hover:grayscale-0 group-hover:mix-blend-normal"
+      />
+    </div>
+  </div>
+</motion.div>
+
         </div>
 
         {/* Divider */}
