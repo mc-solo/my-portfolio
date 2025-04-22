@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import IconLogo from './logo'
 
 /**
@@ -12,6 +12,14 @@ const Navbar = () => {
   
   // isScrolled: tracks whether window.scrollY > 50 to adjust styling
   const [isScrolled, setIsScrolled] = useState(false)
+
+  // Function to smoothly scroll to top using react-scroll
+  const scrollToTop = () => {
+    scroll.scrollToTop({
+      duration: 1000,
+      smooth: true
+    });
+  };
 
   // Listen to scroll once on mount, clean up on unmount
   useEffect(() => {
@@ -36,31 +44,28 @@ const Navbar = () => {
       }`}
     >
       <div className="px-4 w-full">
-        <div className="flex items-center justify-between h-16 max-w-[2000px] mx-auto">
+        <div className="flex items-center justify-between h-16 max-w-[2000px]   mx-auto">
           {/* Logo: scrolls to top (to="home"), sized & colored here */}
-          <Link
-            to="home"           // scroll target: an element with name or id="home"
-            spy={true}          // adds activeClass when in view
-            smooth={true}       // smooth scroll animation
+          <div
+            onClick={scrollToTop}
             className="cursor-pointer"
           >
-            <IconLogo className="h-10 w-10 mt-2 pl-1 text-emerald-400" />
-          </Link>
+            <IconLogo className="h-12 w-12 mt-2 pl-1 text-emerald-400 hover:scale-[1.05]" />
+          </div>
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.target}
-                activeClass="!text-white"   // tailwind override when active
-                to={item.target}            // scroll target
+                to={item.target}
                 spy={true}
                 smooth={true}
-                offset={-70}                // account for fixed navbar height
-                className="relative cursor-pointer text-gray-300 hover:text-emerald-400 transition-all duration-300 group"
+                offset={-70}
+                duration={1000}
+                className="text-gray-400 hover:text-emerald-400 font-medium transition-colors"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             <a

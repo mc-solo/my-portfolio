@@ -5,26 +5,34 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi'
 
 const projects = [
   {
-    title: 'Distributed Task Scheduler',
-    description: 'A scalable backend system for distributed task scheduling and execution',
-    tech: ['Go', 'Kubernetes', 'Redis', 'PostgreSQL'],
-    languages: ['Go'],
+    title: 'Multi-Tenant Rate-Limited REST API',
+    description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server',
+    tech: ['PHP', 'Laravel', 'Redis', 'MySQL'],
+    languages: ['PHP'],
     github: '#',
     demo: '#'
   },
   {
-    title: 'Real-Time Data Pipeline',
-    description: 'High-throughput data processing pipeline with fault-tolerant architecture',
-    tech: ['Apache Kafka', 'Flink', 'Java', 'Cassandra'],
-    languages: ['Java'],
+    title: 'Real-Time Data Notification Service',
+    description: 'Pushes real-time alerts to connected browser clients via websockets.',
+    tech: ['Redis','Django', 'PostgreSQL'],
+    languages: ['Python'],
     github: '#',
     demo: '#'
   },
   {
-    title: 'Serverless API Gateway',
-    description: 'A lightweight serverless gateway for managing microservices communication',
-    tech: ['AWS API Gateway', 'Lambda', 'Node.js', 'DynamoDB'],
-    languages: ['JavaScript', 'Node.js'],
+    title: 'Multi-Tenant Blog Platform with Subdomain Isolation',
+    description: 'A CMS system where each tenant has its own subdomain and content [posts, comments...] and optional custom theme isolation.',
+    tech: ['Django', 'Postgres', 'React.js', 'Redis', 'Nginx'],
+    languages: ['Python', 'JavaScript'],
+    github: '#',
+    demo: '#'
+  },
+  {
+    title: 'Event-Driven Order Processor',
+    description: 'a Spring Boot microservice that consumes OrderCreated events from Kafka, processes payments, and publishes OrderCompleted or OrderFailed',
+    tech: ['Java', 'Spring Boot', 'Postgres', 'Redis', 'Kafka',],
+    languages: ['Java',],
     github: '#',
     demo: '#'
   },

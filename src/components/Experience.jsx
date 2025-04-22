@@ -31,22 +31,22 @@ const Experience = () => {
     // Container for the Experience section with padding for spacing.
     <div className="container mx-auto py-20 px-4">
       {/* Section title */}
-      <h2 className="text-4xl font-bold mb-8 text-center">Professional <span className="text-emerald-400">Work Experience</span></h2>
+      <h2 className="text-4xl font-bold mb-8 text-center">Professional Work Experience</h2>
 
       {/* Map through each experience and render it in a card */}
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           // The key is necessary for React to track list items.
-          <div key={index} className="p-6 border border-emerald-400/30 rounded-lg hover:border-emerald-400/60 hover:shadow-emerald-400/10 hover:shadow-2xl transition-all duration-300">
+          <div key={index} className="p-6 border border-emerald-400/30 rounded-lg hover:border-emerald-400/60  hover:shadow-2xl transition-all duration-300">
             {/* Experience role */}
-            <h3 className="text-2xl font-semibold mb-2 text-emerald-400">{exp.role}</h3>
+            <h3 className="text-2xl font-semibold mb-2">{exp.role}</h3>
             {/* Company information */}
             <p className="text-sm text-gray-300 mb-1">
-              <span className="font-semibold text-emerald-400/80">Company:</span> {exp.company}
+              <span className="font-semibold">Company:</span> {exp.company}
             </p>
             {/* Duration */}
             <p className="text-sm text-gray-300 mb-1">
-              <span className="font-semibold text-emerald-400/80">Duration:</span> {exp.duration}
+              <span className="font-semibold">Duration:</span> {exp.duration}
             </p>
             {/* Description */}
             <p className="text-gray-300 text-xl">{exp.description}</p>

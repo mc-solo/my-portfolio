@@ -19,7 +19,7 @@ const SocialLinks = () => {
   return (
     <>
       {/* Vertical sidebar for md and up */}
-      <div className="fixed top-20 left-6 flex-col items-center gap-6 z-50 hidden md:flex">
+      <div className="fixed bottom-20 right-6 flex-col items-center gap-6 z-50 hidden md:flex">
         <a
           href="https://github.com/mc-solo"
           target="_blank"
