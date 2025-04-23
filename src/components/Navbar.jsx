@@ -43,7 +43,7 @@ const Navbar = () => {
           : 'backdrop-blur-lg bg-gray-900/40'
       }`}
     >
-      <div className="px-4 w-full">
+      <div className=" w-full ">
         <div className="flex items-center justify-between h-16 max-w-[2000px]   mx-auto">
           {/* Logo: scrolls to top (to="home"), sized & colored here */}
           <div
@@ -63,7 +63,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={1000}
-                className="text-gray-400 hover:text-emerald-400 font-medium transition-colors"
+                className="text-gray-400 hover:text-emerald-400 font-medium transition-colors cursor-pointer"
               >
                 {item.name}
               </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
             <a
               href="/CV.pdf"
               download
-              className="px-4 py-2 bg-emerald-400/90 hover:bg-emerald-400 text-gray-900 font-semibold rounded transition-colors duration-300"
+              className="px-4  py-2 bg-emerald-400/90 hover:bg-emerald-400 text-gray-900 font-semibold rounded transition-colors duration-300"
             >
               Get CV
             </a>

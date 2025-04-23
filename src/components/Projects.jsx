@@ -1,7 +1,7 @@
 // src/components/Projects.jsx
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { FiGithub, FiExternalLink, FiFileText } from 'react-icons/fi'
 
 const projects = [
   {
@@ -9,32 +9,36 @@ const projects = [
     description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server',
     tech: ['PHP', 'Laravel', 'Redis', 'MySQL'],
     languages: ['PHP'],
-    github: '#',
-    demo: '#'
+    github: 'https://gihub.com/mc-solo',
+    demo: '#',
+    docs: '#'
   },
   {
     title: 'Real-Time Data Notification Service',
     description: 'Pushes real-time alerts to connected browser clients via websockets.',
     tech: ['Redis','Django', 'PostgreSQL'],
     languages: ['Python'],
-    github: '#',
-    demo: '#'
+    github: 'https://gihub.com/mc-solo',
+    demo: '#',
+    docs: '#'
   },
   {
     title: 'Multi-Tenant Blog Platform with Subdomain Isolation',
     description: 'A CMS system where each tenant has its own subdomain and content [posts, comments...] and optional custom theme isolation.',
     tech: ['Django', 'Postgres', 'React.js', 'Redis', 'Nginx'],
     languages: ['Python', 'JavaScript'],
-    github: '#',
-    demo: '#'
+    github: 'https://gihub.com/mc-solo',
+    demo: '#',
+    docs: '#' 
   },
   {
     title: 'Event-Driven Order Processor',
     description: 'a Spring Boot microservice that consumes OrderCreated events from Kafka, processes payments, and publishes OrderCompleted or OrderFailed',
     tech: ['Java', 'Spring Boot', 'Postgres', 'Redis', 'Kafka',],
     languages: ['Java',],
-    github: '#',
-    demo: '#'
+    github: 'https://gihub.com/mc-solo',
+    demo: '#',
+    docs: '#'
   },
 ]
 
@@ -110,6 +114,14 @@ const ProjectCard = ({ project, index }) => (
         >
           <FiExternalLink className="mr-2" /> Demo
         </a>
+        <a 
+          href={project.docs}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center text-gray-400 hover:text-emerald-400 transition-colors "
+        >
+          <FiFileText className="mr-2" /> Docs
+        </a>
       </div>
     </div>
   </motion.div>
@@ -161,10 +173,10 @@ const Projects = () => {
           animate={{ opacity: 1 }}
           className="max-w-3xl mx-auto mb-10 text-center text-gray-400"
         >
-          <p className="mb-3 text-xl">
+          <p className="mb-3 text-xl md:text-center text-left">
             The projects displayed here are personal demos created during my free time and weekends to showcase my technical skills and capabilities.
           </p>
-          <p className="text-xl">
+          <p className="text-xl md:text-center text-left">
             While I've developed numerous professional projects for governments, NGOs, and private clients, those codebases cannot be shared due to non-disclosure agreements. 
             These demo projects, although not in production, demonstrate my expertise and approach to software development.
           </p>

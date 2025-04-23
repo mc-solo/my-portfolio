@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="container py-20 mx-auto  px-4  ">
+    <div className="container mx-auto py-20  px-4 ">
       <div className="w-full space-y-16">
         {/* Main Content Section */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -35,7 +35,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-lg text-emerald-400 font-mono"
+                className="text-lg text-emerald-400 font-mono "
               >
                 Hi, I'm
               </motion.p>
