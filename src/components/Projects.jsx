@@ -9,7 +9,7 @@ const projects = [
     description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server',
     tech: ['PHP', 'Laravel', 'Redis', 'MySQL'],
     languages: ['PHP'],
-    github: 'https://gihub.com/mc-solo',
+    github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#'
   },
@@ -18,7 +18,7 @@ const projects = [
     description: 'Pushes real-time alerts to connected browser clients via websockets.',
     tech: ['Redis','Django', 'PostgreSQL'],
     languages: ['Python'],
-    github: 'https://gihub.com/mc-solo',
+    github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#'
   },
@@ -27,7 +27,7 @@ const projects = [
     description: 'A CMS system where each tenant has its own subdomain and content [posts, comments...] and optional custom theme isolation.',
     tech: ['Django', 'Postgres', 'React.js', 'Redis', 'Nginx'],
     languages: ['Python', 'JavaScript'],
-    github: 'https://gihub.com/mc-solo',
+    github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#' 
   },
@@ -36,7 +36,7 @@ const projects = [
     description: 'a Spring Boot microservice that consumes OrderCreated events from Kafka, processes payments, and publishes OrderCompleted or OrderFailed',
     tech: ['Java', 'Spring Boot', 'Postgres', 'Redis', 'Kafka',],
     languages: ['Java',],
-    github: 'https://gihub.com/mc-solo',
+    github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#'
   },
