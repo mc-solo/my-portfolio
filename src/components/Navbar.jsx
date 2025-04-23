@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
+import IconLogo from './logo'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+
+  const scrollToTop = () => {
+    scroll.scrollToTop({
+      duration: 1000,
+      smooth: true
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -27,14 +36,12 @@ const Navbar = () => {
     >
       <div className="px-4 w-full">
         <div className="flex items-center justify-between h-16 max-w-[2000px]">
-          <Link
-            to={'/'}
-            spy={true}
-            smooth={true}
-            className="text-2xl md:pl-4 font-bold cursor-pointer text-white animate-gradient-x flex items-center"
+        <div
+            onClick={scrollToTop}
+            className="cursor-pointer"
           >
-            WA
-          </Link>
+            <IconLogo className="h-12 w-12 mt-2 pl-1 text-emerald-400 hover:scale-[1.05]" />
+          </div>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-8">
