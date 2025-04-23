@@ -1,0 +1,5 @@
+[build]
+  # command → what Netlify runs to compile your app
+  command = "npm run build"
+  # publish → which folder to serve
+  publish = "dist"
