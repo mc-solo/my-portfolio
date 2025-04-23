@@ -14,9 +14,18 @@ const projects = [
     docs: '#'
   },
   {
+    title: 'Custom OAuth Server',
+    description: 'A custom OAuth server that provides a secure and scalable way to manage authentication and authorization for applications.',
+    tech: ['PHP', 'Laravel', 'Docker', 'MySQL', 'Laravel Passport',' Laravel Socialite'],
+    languages: ['PHP'],
+    github: 'https://github.com/mc-solo',
+    demo: '#',
+    docs: '#'
+  },
+  {
     title: 'Real-Time Data Notification Service',
     description: 'Pushes real-time alerts to connected browser clients via websockets.',
-    tech: ['Redis','Django', 'PostgreSQL'],
+    tech: ['Python','Django','Redis', 'PostgreSQL'],
     languages: ['Python'],
     github: 'https://github.com/mc-solo',
     demo: '#',
@@ -25,7 +34,7 @@ const projects = [
   {
     title: 'Multi-Tenant Blog Platform with Subdomain Isolation',
     description: 'A CMS system where each tenant has its own subdomain and content [posts, comments...] and optional custom theme isolation.',
-    tech: ['Django', 'Postgres', 'React.js', 'Redis', 'Nginx'],
+    tech: ['Django', 'Postgres', 'React.js', 'Redis'],
     languages: ['Python', 'JavaScript'],
     github: 'https://github.com/mc-solo',
     demo: '#',
