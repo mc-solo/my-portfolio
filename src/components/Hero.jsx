@@ -48,7 +48,7 @@ const Hero = () => {
             </div>
 
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-              I'm obsessed with creating software that makes a meaningful difference in people's lives. I'm driven by a passion to build innovative systems that solve real-world problems and make a tangible impact. I'm always looking for the next big idea that can empower people and organizations, and I'm addicted to bringing that vision to life.
+            I’m a back-end software engineer and Computer Science student transforming complex requirements into scalable and efficient web and mobile solutions. I am really good at designing clean, maintainable APIs, optimizing database queries for peak performance, and writing a clean code that’s as reliable as it is efficient.
             </p>
 
             <div className="flex gap-4 justify-center md:justify-center lg:justify-start">

@@ -14,26 +14,20 @@ const Experience = () => {
   // Each object contains the role, company, duration, and a short description.
   const experiences = [
     {
-      role: 'Jr. Backend Engineer',
+      role: 'Backend Engineer',
       company: 'Tewos Technology Solutions',
       duration: '2024 - Present | Full-Time',
       description: 'I have contributed for the design and implementation of  multiple web apps and mobile projects for scalability and efficiency.'
     },
-    {
-      role: 'Fullstack Engineer',
-      company: 'Drew Business Enterprise',
-      duration: 'Jun 2022 - Present | Part-Time',
-      description: 'I am soley responsible for the design, implementation and scaling of the whole e-commerce platform for Drew Business Enterprise.'
-    }
   ]
 
   return (
-    // Container for the Experience section with padding for spacing.
     <div className="container mx-auto py-20 px-4">
-      {/* Section title */}
       <h2 className="text-4xl font-bold mb-8 text-center">Professional Work Experience</h2>
+      <p className="text-gray-300 text-center mb-8 px-4 max-w-4xl mx-auto">
+        Hey, Take it easy on me :) Even though I've worked on lots of personal projects, I'm still a beginner when it comes to professional work experience. Just wanted to let you know!
+      </p>
 
-      {/* Map through each experience and render it in a card */}
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           // The key is necessary for React to track list items.
