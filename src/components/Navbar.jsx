@@ -60,7 +60,7 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="/CV.pdf"
+              href="/WondwosenAsegid.pdf"
               download
               className="px-4 py-2 bg-emerald-400/90 hover:bg-emerald-400 text-gray-900 font-semibold rounded transition-colors duration-300"
             >
