@@ -51,7 +51,7 @@ const projects = [
   },
 ]
 
-// Get all unique programming languages from projects
+// gets all unique programming languages from my projects object
 const getAllLanguages = () => {
   const languageSet = new Set();
   projects.forEach(project => {
