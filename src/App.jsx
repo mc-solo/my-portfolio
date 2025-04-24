@@ -47,6 +47,9 @@ const App = () => {
       </section>
 
       <SocialLinks />
+      <div className="text-center text-gray-400 text-sm py-4">
+        Designed and developed by Wondwosen Asegid &copy; {new Date().getFullYear()}
+      </div>
     </div>
   )
 }

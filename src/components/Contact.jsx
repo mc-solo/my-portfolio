@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiMail, FiPhone, FiLinkedin, FiGithub, FiSend } from 'react-icons/fi'
+import { FaTelegram } from 'react-icons/fa'
 
 /**
  * Contact Component
@@ -17,6 +18,7 @@ const Contact = () => {
     message: ''
   })
   const [formStatus, setFormStatus] = useState(null)
+  const [isAvailable, setIsAvailable] = useState(false) // Set to true or false based on your availability
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -43,6 +45,15 @@ const Contact = () => {
         className="text-center mb-12"
       >
         <h2 className="text-4xl font-bold mb-4 text-gray-200">Contact Me</h2>
+        <div className="flex items-center justify-center mb-4">
+          <div className={`px-4 py-2 rounded-full font-semibold text-sm ${
+            isAvailable 
+              ? 'bg-emerald-400/90 text-gray-900' 
+              : 'bg-red-400/90 text-gray-900'
+          }`}>
+            {isAvailable ? 'Available for Hire' : 'Currently Unavailable for Hire'}
+          </div>
+        </div>
         <p className="max-w-xl mx-auto text-xl text-gray-400">
           I'm interested in freelance opportunities, collaborations, and discussing innovative ideas.
           Feel free to reach out if you have any questions or just want to say hello!
@@ -172,6 +183,23 @@ const Contact = () => {
             
             <div className="flex items-start space-x-4">
               <div className="bg-gray-800 p-3 rounded-full border border-emerald-400/30">
+                <FaTelegram className="text-emerald-400/80 w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-gray-300 font-medium">Telegram</h4>
+                <a 
+                  href="https://t.me/mc_solo" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-emerald-400 transition-colors"
+                >
+                  @mc_solo
+                </a>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="bg-gray-800 p-3 rounded-full border border-emerald-400/30">
                 <FiLinkedin className="text-emerald-400/80 w-5 h-5" />
               </div>
               <div>
@@ -203,18 +231,6 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-          </div>
-          
-          <div className="mt-8 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
-            <p className="text-gray-400 text-xl">
-              Prefer to schedule a call? Feel free to book a time slot through my calendar.
-            </p>
-            <a 
-              href="#" 
-              className="mt-3 inline-block px-4 py-2 bg-gray-800 hover:bg-emerald-400/90 text-gray-300 hover:text-gray-900 rounded-md transition-colors text-sm"
-            >
-              Schedule a Meeting
-            </a>
           </div>
         </motion.div>
       </div>
