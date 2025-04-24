@@ -58,7 +58,7 @@ const SocialLinks = () => {
         </a>
       </div>
       {/* Horizontal bar for small screens */}
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex gap-8 z-50 md:hidden bg-gray-900/80 rounded-full px-6 py-2 shadow-lg">
+      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex gap-8 z-50 md:hidden bg-gray-900/80 rounded-full px-6 py-2 shadow-lg">
         <a
           href="https://github.com/mc-solo"
           target="_blank"
