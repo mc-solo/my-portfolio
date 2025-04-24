@@ -126,10 +126,10 @@ const Hero = () => {
             </h3>
             <div className="space-y-4 text-gray-400">
               <p className="leading-relaxed text-xl">
-                I've been actively coding since grade 9, when a brilliant mentor named Nazrawi Eyob introduced me to Java during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
+                I've been introduced to the world of coding in 2017, when i was in grade 9 and I met a weird and genius guy called Nazrawi Eyob who introduced me to Java lang during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
               </p>
               <p className="leading-relaxed text-xl">
-                After high school, I enrolled at Addis Ababa Science and Technology University but ultimately left when I couldn't secure a place in the software engineering department. Determined to pursue my passion, I've since built an extensive portfolio of projects while continuing my education as a third-year Computer Science student, focusing on practical development skills and innovative solutions.
+                And after i finished high school, I enrolled at Addis Ababa Science and Technology University but ultimately left when I couldn't secure a place in the software engineering department. Determined to pursue my passion, I've since built an extensive portfolio of projects while continuing my education as a third-year Computer Science student, focusing on practical development skills and innovative solutions.
               </p>
             </div>
           </motion.div>
