@@ -1,4 +1,3 @@
-// src/components/SocialLinks.jsx
 import React from 'react'
 // Import icons from react-icons: GitHub, LinkedIn, YouTube, and LeetCode.
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
