@@ -30,7 +30,7 @@ const SocialLinks = () => {
           <FaGithub size={34} />
         </a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://linkedin.com/in/wondwosen-asegid-3a30aa279"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-emerald-400 transition-colors"
@@ -39,7 +39,7 @@ const SocialLinks = () => {
           <FaLinkedin size={34} />
         </a>
         <a
-          href="https://youtube.com/yourchannel"
+          href="https://youtube.com/@WondwosenAsegid"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-emerald-400 transition-colors"
@@ -48,7 +48,7 @@ const SocialLinks = () => {
           <FaYoutube size={34} />
         </a>
         <a
-          href="https://leetcode.com/yourusername"
+          href="https://leetcode.com/mc-solo"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-emerald-400 transition-colors"
