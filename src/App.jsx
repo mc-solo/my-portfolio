@@ -34,17 +34,25 @@ const App = () => {
         <Hero />
       </section>
 
-      <section id="projects" className="py-20 px-4">
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent" />
+
+      <section id="projects" className="py-8 px-4">
         <Projects />
       </section>
 
-      <section id="experience" className="py-20 px-4 ">
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent" />
+
+      <section id="experience" className="py-8 px-4">
         <Experience />
       </section>
 
-      <section id="contact" className="py-20 px-4 ">
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent" />
+
+      <section id="contact" className="py-8 px-4">
         <Contact />
       </section>
+
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent" />
 
       <SocialLinks />
       <div className="text-center text-gray-400 text-sm py-4">

@@ -99,7 +99,7 @@ const ProjectCard = ({ project, index }) => (
             key={tech}
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
-            className="px-3 py-1 text-sm bg-gray-800 hover:bg-emerald-400/10 rounded-full text-gray-300 border border-emerald-400/20 hover:border-emerald-400/40 transition-colors"
+            className="px-3 py-1 text-sm bg-gray-800 hover:bg-gray-700 rounded-full text-gray-300 border border-gray-700 hover:border-gray-600 transition-colors"
           >
             {tech}
           </motion.span>
@@ -111,7 +111,7 @@ const ProjectCard = ({ project, index }) => (
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-emerald-400 transition-colors"
+          className="flex items-center text-gray-400 hover:text-gray-300 transition-colors"
         >
           <FiGithub className="mr-2" /> Code
         </a>
@@ -119,7 +119,7 @@ const ProjectCard = ({ project, index }) => (
           href={project.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-emerald-400 transition-colors"
+          className="flex items-center text-gray-400 hover:text-gray-300 transition-colors"
         >
           <FiExternalLink className="mr-2" /> Demo
         </a>
@@ -127,7 +127,7 @@ const ProjectCard = ({ project, index }) => (
           href={project.docs}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-emerald-400 transition-colors "
+          className="flex items-center text-gray-400 hover:text-gray-300 transition-colors"
         >
           <FiFileText className="mr-2" /> Docs
         </a>
@@ -140,8 +140,8 @@ const FilterButton = ({ label, isActive, onClick }) => (
   <button
     onClick={onClick}
     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive 
-      ? 'bg-emerald-400/90 text-gray-900' 
-      : 'bg-gray-800 text-gray-400 border border-emerald-400/20 hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-400'}`}
+      ? 'bg-gray-300 text-gray-900' 
+      : 'bg-gray-800 text-gray-400 border border-gray-700 hover:border-gray-600 hover:bg-gray-700 hover:text-gray-300'}`}
   >
     {label}
   </button>

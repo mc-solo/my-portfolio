@@ -1,20 +1,8 @@
-// src/components/SocialLinks.jsx
 import React from 'react'
-// Import icons from react-icons: GitHub, LinkedIn, YouTube, and LeetCode.
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
 
-/**
- * SocialLinks Component
- *
- * This component renders social media icons connected vertically by lines.
- * The component is fixed at the bottom left of the viewport and does not scroll with the rest of the page.
- *
- * Each icon is wrapped in an anchor tag (<a>) with a target URL pointing to your respective profile.
- * Replace the URLs with your actual profile links.
- *
- * No parameters are needed. The component returns JSX representing the vertical icon column.
- */
+
 const SocialLinks = () => {
   return (
     <>
@@ -24,7 +12,7 @@ const SocialLinks = () => {
           href="https://github.com/mc-solo"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="GitHub"
         >
           <FaGithub size={34} />
@@ -33,7 +21,7 @@ const SocialLinks = () => {
           href="https://linkedin.com/in/wondwosen-asegid-3a30aa279"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="LinkedIn"
         >
           <FaLinkedin size={34} />
@@ -42,7 +30,7 @@ const SocialLinks = () => {
           href="https://youtube.com/@WondwosenAsegid"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="YouTube"
         >
           <FaYoutube size={34} />
@@ -51,7 +39,7 @@ const SocialLinks = () => {
           href="https://leetcode.com/mc-solo"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="LeetCode"
         >
           <SiLeetcode size={34} />
@@ -63,7 +51,7 @@ const SocialLinks = () => {
           href="https://github.com/mc-solo"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="GitHub"
         >
           <FaGithub size={28} />
@@ -72,7 +60,7 @@ const SocialLinks = () => {
           href="https://linkedin.com/in/wondwosen-asegid-3a30aa279"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="LinkedIn"
         >
           <FaLinkedin size={28} />
@@ -81,16 +69,16 @@ const SocialLinks = () => {
           href="https://youtube.com/@WondwosenAsegid"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="YouTube"
         >
           <FaYoutube size={28} />
         </a>
         <a
-          href="https://leetcode.com/yourusername"
+          href="https://leetcode.com/mc-solo"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-300 hover:text-emerald-400 transition-colors"
+          className="text-gray-300 hover:text-gray-100 transition-colors"
           aria-label="LeetCode"
         >
           <SiLeetcode size={28} />

@@ -3,10 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      // Custom colors for a futuristic green and dark blue theme
+      // Custom colors for a monochromatic black and gray theme
       colors: {
-        darkblue: '#001f3f',    // A deep, dark blue
-        neonGreen: '#39ff14',   // A bright neon green accent
+        darkblue: '#000000',    // Pure black
       },
     },
     fontFamily: {

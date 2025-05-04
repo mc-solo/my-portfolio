@@ -48,8 +48,8 @@ const Contact = () => {
         <div className="flex items-center justify-center mb-4">
           <div className={`px-4 py-2 rounded-full font-semibold text-sm ${
             isAvailable 
-              ? 'bg-emerald-400/90 text-gray-900' 
-              : 'bg-red-400/90 text-gray-900'
+              ? 'bg-gray-300 text-gray-900' 
+              : 'bg-gray-700 text-gray-300'
           }`}>
             {isAvailable ? 'Available for Hire' : 'Currently Unavailable for Hire'}
           </div>
@@ -81,7 +81,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400/70 text-gray-300"
+                  className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-300"
                 />
               </div>
               <div>
@@ -93,7 +93,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400/70 text-gray-300"
+                  className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-300"
                 />
               </div>
             </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 text-gray-300"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-300"
               />
             </div>
             
@@ -120,7 +120,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400/70 text-gray-300 resize-none"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-300 resize-none"
               ></textarea>
             </div>
             
@@ -128,7 +128,7 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="flex items-center justify-center space-x-2 px-6 py-3 bg-emerald-400/90 hover:bg-emerald-400 text-gray-900 rounded-lg transition-colors w-full md:w-auto"
+              className="flex items-center justify-center space-x-2 px-6 py-3 bg-gray-300 hover:bg-gray-100 text-gray-900 rounded-lg transition-colors w-full md:w-auto"
             >
               <FiSend />
               <span>Send Message</span>
@@ -157,14 +157,14 @@ const Contact = () => {
           
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
-              <div className="bg-gray-800 p-3 rounded-full border border-emerald-400/30">
-                <FiMail className="text-emerald-400/80 w-5 h-5" />
+              <div className="bg-gray-800 p-3 rounded-full border border-gray-700">
+                <FiMail className="text-gray-300 w-5 h-5" />
               </div>
               <div>
                 <h4 className="text-gray-300 font-medium">Email</h4>
                 <a 
                   href="mailto:wondwosen.asegid@gmail.com" 
-                  className="text-gray-400 hover:text-emerald-400 transition-colors"
+                  className="text-gray-400 hover:text-gray-300 transition-colors"
                 >
                   wondwosen.asegid@gmail.com
                 </a>
@@ -172,8 +172,8 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start space-x-4">
-              <div className="bg-gray-800 p-3 rounded-full border border-emerald-400/30">
-                <FiPhone className="text-emerald-400/80 w-5 h-5" />
+              <div className="bg-gray-800 p-3 rounded-full border border-gray-700">
+                <FiPhone className="text-gray-300 w-5 h-5" />
               </div>
               <div>
                 <h4 className="text-gray-300 font-medium">Phone</h4>
@@ -182,8 +182,8 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start space-x-4">
-              <div className="bg-gray-800 p-3 rounded-full border border-emerald-400/30">
-                <FaTelegram className="text-emerald-400/80 w-5 h-5" />
+              <div className="bg-gray-800 p-3 rounded-full border border-gray-700">
+                <FaTelegram className="text-gray-300 w-5 h-5" />
               </div>
               <div>
                 <h4 className="text-gray-300 font-medium">Telegram</h4>
@@ -191,7 +191,7 @@ const Contact = () => {
                   href="https://t.me/mc_solo" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors"
+                  className="text-gray-400 hover:text-gray-300 transition-colors"
                 >
                   @mc_solo
                 </a>
@@ -199,8 +199,8 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start space-x-4">
-              <div className="bg-gray-800 p-3 rounded-full border border-emerald-400/30">
-                <FiLinkedin className="text-emerald-400/80 w-5 h-5" />
+              <div className="bg-gray-800 p-3 rounded-full border border-gray-700">
+                <FiLinkedin className="text-gray-300 w-5 h-5" />
               </div>
               <div>
                 <h4 className="text-gray-300 font-medium">LinkedIn</h4>
@@ -208,7 +208,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/wondwosen-asegid-3a30aa279/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors"
+                  className="text-gray-400 hover:text-gray-300 transition-colors"
                 >
                   linkedin.com/in/wondwosen-asegid
                 </a>
@@ -216,8 +216,8 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start space-x-4">
-              <div className="bg-gray-800 p-3 rounded-full border border-emerald-400/30">
-                <FiGithub className="text-emerald-400/80 w-5 h-5" />
+              <div className="bg-gray-800 p-3 rounded-full border border-gray-700">
+                <FiGithub className="text-gray-300 w-5 h-5" />
               </div>
               <div>
                 <h4 className="text-gray-300 font-medium">GitHub</h4>
@@ -225,7 +225,7 @@ const Contact = () => {
                   href="https://github.com/mc-solo" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors"
+                  className="text-gray-400 hover:text-gray-300 transition-colors"
                 >
                   github.com/mc-solo
                 </a>

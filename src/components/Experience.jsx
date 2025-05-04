@@ -31,7 +31,8 @@ const Experience = () => {
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           // The key is necessary for React to track list items.
-          <div key={index} className="p-6 border border-emerald-400/30 rounded-lg hover:border-emerald-400/60  hover:shadow-2xl transition-all duration-300">
+          <div key={index} className="relative group bg-gray-900/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300">
+            <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-gray-500/20 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             {/* Experience role */}
             <h3 className="text-2xl font-semibold mb-2">{exp.role}</h3>
             {/* Company information */}
@@ -47,7 +48,6 @@ const Experience = () => {
           </div>
         ))}
       </div>
-
     </div>
   )
 }

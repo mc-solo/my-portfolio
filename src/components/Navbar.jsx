@@ -40,7 +40,7 @@ const Navbar = () => {
             onClick={scrollToTop}
             className="cursor-pointer"
           >
-            <IconLogo className="h-12 w-12 mt-2 pl-1 text-emerald-400 hover:scale-[1.05]" />
+            <IconLogo className="h-12 w-12 mt-2 pl-1 text-gray-300 hover:scale-[1.05]" />
           </div>
 
           {/* Desktop nav */}
@@ -53,16 +53,16 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                className="relative cursor-pointer text-gray-300 hover:text-emerald-400 transition-all duration-300 group"
+                className="relative cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-300 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             <a
               href="/WondwosenAsegid.pdf"
               download
-              className="px-4 py-2 bg-emerald-400/90 hover:bg-emerald-400 text-gray-900 font-semibold rounded transition-colors duration-300"
+              className="px-4 py-2 bg-gray-300 hover:bg-gray-100 text-gray-900 font-semibold rounded transition-colors duration-300"
             >
               Get CV
             </a>
@@ -118,16 +118,16 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               onClick={() => setIsMenuOpen(false)}
-              className="text-2xl font-medium text-gray-100 hover:text-emerald-400 transition-all duration-300"
+              className="text-2xl font-medium text-gray-100 hover:text-gray-300 transition-all duration-300"
             >
               {item.name}
             </Link>
           ))}
           <a
-            href="/CV.pdf"
+            href="/WondwosenAsegid.pdf"
             download
             onClick={() => setIsMenuOpen(false)}
-            className="mt-4 px-8 py-3 bg-emerald-400/90 hover:bg-emerald-400 text-gray-900 font-semibold rounded-lg transition-colors duration-300"
+            className="mt-4 px-8 py-3 bg-gray-300 hover:bg-gray-100 text-gray-900 font-semibold rounded-lg transition-colors duration-300"
           >
             Get CV
           </a>
