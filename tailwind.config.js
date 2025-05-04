@@ -1,11 +1,10 @@
-// tailwind.config.js
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      // Custom colors for a monochromatic black and gray theme
+      // my ustom colors for a monochromatic black and gray theme
       colors: {
-        darkblue: '#000000',    // Pure black
+        darkblue: '#000000', 
       },
     },
     fontFamily: {

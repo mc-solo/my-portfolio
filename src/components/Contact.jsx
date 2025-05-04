@@ -18,7 +18,7 @@ const Contact = () => {
     message: ''
   })
   const [formStatus, setFormStatus] = useState(null)
-  const [isAvailable, setIsAvailable] = useState(false) // Set to true or false based on your availability
+  const [isAvailable, setIsAvailable] = useState(false) // true or false based on my availability
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -27,8 +27,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // In a real implementation, you would send the form data to a server or email service
-    // For now, we'll simulate a successful submission
+    // todo: In a real implementation, i would send the form data to a server or email service
     setFormStatus('success')
     setTimeout(() => {
       setFormStatus(null)
@@ -177,7 +176,9 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-gray-300 font-medium">Phone</h4>
-                <p className="text-gray-400">+251911563689</p>
+                <a href="tel:+251911563689">
+                  <p className="text-gray-400 hover:text-gray-300 transition-colors">+251911563689</p>
+                </a>
               </div>
             </div>
             
