@@ -4,10 +4,11 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
   const skills = [
-    'PHP/Laravel', 'Node.js/Express', 'Java/Spring Boot',
+    'PHP/Laravel', 'Node.js/Express', 'Automation Testing',
     'PostgreSQL', 'RESTful APIs', 'GraphQL',
-    'Microservices', 'Docker/Kubernetes', 
+    'Microservices', 'Docker/Kubernetes',
     'Flutter/Dart', 'Firebase',
+    'Playwright', 'Cypress', 'Selenium',
      'System Architecture'
   ]
 
@@ -48,7 +49,7 @@ const Hero = () => {
             </div>
 
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-            I'm a back-end software engineer and Computer Science student transforming complex requirements into scalable and efficient web and mobile solutions. I am really good at designing clean, maintainable APIs, optimizing database queries for peak performance, and writing a clean code that's as reliable as it is efficient.
+            I'm a back-end software engineer and Computer Science student transforming complex requirements into scalable and efficient web and mobile solutions. I am really good at designing clean, maintainable APIs, optimizing database queries for peak performance, and writing clean code that is as reliable as it is efficient.
             </p>
 
             <div className="flex gap-4 justify-center md:justify-center lg:justify-start">
@@ -126,10 +127,10 @@ const Hero = () => {
             </h3>
             <div className="space-y-4 text-gray-400">
               <p className="leading-relaxed text-xl">
-                I've been introduced to the world of coding in 2017, when i was in grade 9 and I met a weird and genius guy called Nazrawi Eyob who introduced me to Java lang during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
+                I was introduced to the world of coding in 2017, when I was in grade 9, and I met a weird and genius guy called Nazrawi Eyob, who introduced me to Java during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
               </p>
               <p className="leading-relaxed text-xl">
-                And after i finished high school, I enrolled at Addis Ababa Science and Technology University but ultimately left when I couldn't secure a place in the software engineering department. Determined to pursue my passion, I've since built an extensive portfolio of projects while continuing my education as a third-year Computer Science student, focusing on practical development skills and innovative solutions.
+                After I finished high school, I enrolled at Addis Ababa Science and Technology University, but ultimately left when I couldn't secure a place in the software engineering department. Determined to pursue my passion, I've since built an extensive portfolio of projects while continuing my education as a third-year Computer Science student, focusing on practical development skills and innovative solutions.
               </p>
             </div>
           </motion.div>
@@ -146,7 +147,7 @@ const Hero = () => {
               My Technical Arsenal
             </h3>
             <p className="leading-relaxed text-gray-400 mb-4 text-xl">
-              I primarily focus on the logical components of projects, specializing in backend development where I excel at creating robust, scalable systems. While I have some experience with frontend technologies, my true passion lies in building the powerful engines that drive applications behind the scenes, bringing my backend solutions to life.
+              I primarily focus on the logical components of projects, specializing in backend development where I excel at creating robust, scalable systems. While I have some experience with frontend technologies, my true passion lies in building the powerful engines that drive applications behind the scenes, bringing my backend solutions to life. I also build automated tests that catch regressions before they reach production.
             </p>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (

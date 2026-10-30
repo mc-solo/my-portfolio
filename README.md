@@ -24,7 +24,7 @@ A modern, responsive portfolio website built with React and Vite, showcasing my 
 ## Installation
 
 1. Clone my repo:
-```sehll
+```shell
 git clone https://github.com/mc-solo/my-portfolio.git
 cd my-portfolio
 ```
