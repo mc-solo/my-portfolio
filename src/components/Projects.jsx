@@ -213,8 +213,7 @@ const Projects = () => {
             The projects displayed here are personal demos created during my free time and weekends to showcase my technical skills and capabilities.
           </p>
           <p className="text-xl md:text-center text-left">
-            While I've developed a few professional projects for an NGO and some private clients, those codebases cannot be shared due to non-disclosure agreements. 
-            These demo projects, although not in production, demonstrate my expertise, thought process and approach to software development.
+            These demo projects, although not in production, demonstrate my expertise, thought process, and approach to software development, from backend design and testing to building practical, production-ready solutions.
           </p>
         </motion.div>
         

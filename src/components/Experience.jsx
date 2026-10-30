@@ -16,8 +16,20 @@ const Experience = () => {
     {
       role: 'Backend Engineer',
       company: 'Tewos Technology Solutions',
-      duration: '2024 - Present | Full-Time',
-      description: 'I have contributed to the design and implementation of multiple web apps and mobile projects for scalability and efficiency.'
+      duration: '2024 - 2025',
+      description: 'Designing and implementing scalable web and mobile applications, with a focus on clean backend architecture, reliable APIs, and efficient data handling.'
+    },
+    {
+      role: 'Backend Developer & SDET',
+      company: 'See Tech International',
+      duration: '2025 - Present',
+      description: 'Building backend services and automated test coverage for web and mobile systems, with a focus on reliable APIs and regression testing.'
+    },
+    {
+      role: 'Backend Developer Intern',
+      company: 'Zion Software Agency',
+      duration: '2025 | 4 months | Remote',
+      description: 'Remote internship focused on JavaScript backend development, supporting backend services and building production development experience.'
     },
   ]
 
@@ -25,7 +37,7 @@ const Experience = () => {
     <div className="container mx-auto py-20 px-4">
       <h2 className="text-4xl font-bold mb-8 text-center">Professional Work Experience</h2>
       <p className="text-gray-300 text-center mb-8 px-4 max-w-4xl mx-auto">
-        Hey, take it easy on me :) Even though I've worked on lots of personal projects, I'm still a beginner when it comes to professional work experience. Just wanted to let you know!
+        My professional work spans backend development and software quality, with experience building and testing web and mobile systems for real users.
       </p>
 
       <div className="space-y-8">
