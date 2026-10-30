@@ -5,18 +5,45 @@ import { FiGithub, FiExternalLink, FiFileText } from 'react-icons/fi'
 
 const projects = [
   {
-    title: 'Go Multi-Tenant Rate-Limited REST API',
-    description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server, built with Go for fast, concurrent request handling.',
-    tech: ['Go', 'Redis', 'PostgreSQL'],
+    title: 'AI Document Intelligence Platform',
+    description: 'Ask questions over uploaded documents and get answers with citations to the source pages, built on chunking, embeddings, and hybrid retrieval.',
+    tech: ['Go', 'PostgreSQL', 'pgvector', 'Redis', 'gRPC'],
     languages: ['Go'],
     github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#'
   },
   {
-    title: 'Go OAuth2 Authorization Server',
-    description: 'A custom OAuth2 server in Go that provides a secure and scalable way to manage authentication and authorization for applications.',
-    tech: ['Go', 'Docker', 'PostgreSQL', 'Redis'],
+    title: 'Multi-Tenant API Gateway with Usage Billing',
+    description: 'Routes and protects internal services with per-tenant rate limits, API key and JWT auth, usage metering, and billing reports.',
+    tech: ['Go', 'Redis', 'gRPC', 'PostgreSQL', 'Prometheus'],
+    languages: ['Go'],
+    github: 'https://github.com/mc-solo',
+    demo: '#',
+    docs: '#'
+  },
+  {
+    title: 'Distributed Job Orchestrator',
+    description: 'Runs dependent jobs as workflows with priority queues, retries with backoff, dead letter handling, and idempotent execution.',
+    tech: ['Go', 'Redis', 'gRPC', 'PostgreSQL', 'Docker'],
+    languages: ['Go'],
+    github: 'https://github.com/mc-solo',
+    demo: '#',
+    docs: '#'
+  },
+  {
+    title: 'AI Media Processing Pipeline',
+    description: 'Processes uploaded video and audio with transcoding, AI transcription and captions, tags, and searchable transcripts with live progress.',
+    tech: ['Go', 'Redis', 'gRPC', 'Docker', 'FFmpeg'],
+    languages: ['Go'],
+    github: 'https://github.com/mc-solo',
+    demo: '#',
+    docs: '#'
+  },
+  {
+    title: 'Real-Time AI Support Copilot',
+    description: 'Live support rooms with cross-instance messaging, AI summaries and suggested replies, and a semantic cache for repeated questions.',
+    tech: ['Go', 'WebSockets', 'Redis', 'gRPC', 'PostgreSQL'],
     languages: ['Go'],
     github: 'https://github.com/mc-solo',
     demo: '#',
