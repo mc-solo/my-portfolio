@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
   const skills = [
-    'PHP/Laravel', 'Node.js/Express', 'Automation Testing',
+    'Go', 'Node.js/Express', 'Automation Testing',
     'PostgreSQL', 'RESTful APIs', 'GraphQL',
     'Microservices', 'Docker/Kubernetes',
     'Flutter/Dart', 'Firebase',
