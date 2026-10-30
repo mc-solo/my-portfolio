@@ -6,7 +6,7 @@ import { FiGithub, FiExternalLink, FiFileText } from 'react-icons/fi'
 const projects = [
   {
     title: 'Multi-Tenant Rate-Limited REST API',
-    description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server',
+    description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server.',
     tech: ['PHP', 'Laravel', 'Redis', 'MySQL'],
     languages: ['PHP'],
     github: 'https://github.com/mc-solo',
@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Custom OAuth Server',
     description: 'A custom OAuth server that provides a secure and scalable way to manage authentication and authorization for applications.',
-    tech: ['PHP', 'Laravel', 'Docker', 'MySQL', 'Laravel Passport',' Laravel Socialite'],
+    tech: ['PHP', 'Laravel', 'Docker', 'MySQL', 'Laravel Passport', 'Laravel Socialite'],
     languages: ['PHP'],
     github: 'https://github.com/mc-solo',
     demo: '#',
@@ -24,8 +24,8 @@ const projects = [
   },
   {
     title: 'Real-Time Data Notification Service',
-    description: 'Pushes real-time alerts to connected browser clients via websockets.',
-    tech: ['Python','Django','Redis', 'PostgreSQL'],
+    description: 'Pushes real-time alerts to connected browser clients via WebSockets.',
+    tech: ['Python', 'Django', 'Redis', 'PostgreSQL'],
     languages: ['Python'],
     github: 'https://github.com/mc-solo',
     demo: '#',
@@ -33,18 +33,45 @@ const projects = [
   },
   {
     title: 'Multi-Tenant Blog Platform with Subdomain Isolation',
-    description: 'A CMS system where each tenant has its own subdomain and content [posts, comments...] and optional custom theme isolation.',
-    tech: ['Django', 'Postgres', 'React.js', 'Redis'],
+    description: 'A CMS where each tenant has its own subdomain and content (posts, comments, and more) and optional custom theme isolation.',
+    tech: ['Django', 'PostgreSQL', 'React.js', 'Redis'],
     languages: ['Python', 'JavaScript'],
     github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#' 
   },
   {
-    title: 'Event-Driven Order Processor',
-    description: 'a Spring Boot microservice that consumes OrderCreated events from Kafka, processes payments, and publishes OrderCompleted or OrderFailed',
-    tech: ['Java', 'Spring Boot', 'Postgres', 'Redis', 'Kafka',],
-    languages: ['Java',],
+    title: 'Playwright End-to-End Test Automation',
+    description: 'Automated end-to-end tests for web flows, covering user journeys, cross-browser checks, and repeatable regression coverage.',
+    tech: ['Playwright', 'JavaScript', 'TypeScript', 'E2E Testing'],
+    languages: ['JavaScript'],
+    github: 'https://github.com/mc-solo',
+    demo: '#',
+    docs: '#'
+  },
+  {
+    title: 'Cypress UI Test Automation',
+    description: 'Browser-based UI tests for critical flows, with readable test cases, reusable commands, and fast feedback during development.',
+    tech: ['Cypress', 'JavaScript', 'E2E Testing'],
+    languages: ['JavaScript'],
+    github: 'https://github.com/mc-solo',
+    demo: '#',
+    docs: '#'
+  },
+  {
+    title: 'Selenium Web Automation Framework',
+    description: 'A reusable Selenium WebDriver framework using the Page Object Model, with shared locators, test data handling, and cross-browser runs.',
+    tech: ['Selenium', 'WebDriver', 'Python', 'Page Object Model'],
+    languages: ['Python'],
+    github: 'https://github.com/mc-solo',
+    demo: '#',
+    docs: '#'
+  },
+  {
+    title: 'API Testing Suite',
+    description: 'Automated tests for REST APIs, covering status codes, response schemas, authentication, and error cases for core endpoints.',
+    tech: ['REST APIs', 'API Testing', 'JavaScript', 'JSON Schema'],
+    languages: ['JavaScript'],
     github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#'

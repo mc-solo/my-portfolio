@@ -27,7 +27,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // todo: In a real implementation, i would send the form data to a server or email service
+    // todo: In a real implementation, I would send the form data to a server or email service
     setFormStatus('success')
     setTimeout(() => {
       setFormStatus(null)

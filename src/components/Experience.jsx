@@ -17,7 +17,7 @@ const Experience = () => {
       role: 'Backend Engineer',
       company: 'Tewos Technology Solutions',
       duration: '2024 - Present | Full-Time',
-      description: 'I have contributed for the design and implementation of  multiple web apps and mobile projects for scalability and efficiency.'
+      description: 'I have contributed to the design and implementation of multiple web apps and mobile projects for scalability and efficiency.'
     },
   ]
 
@@ -25,7 +25,7 @@ const Experience = () => {
     <div className="container mx-auto py-20 px-4">
       <h2 className="text-4xl font-bold mb-8 text-center">Professional Work Experience</h2>
       <p className="text-gray-300 text-center mb-8 px-4 max-w-4xl mx-auto">
-        Hey, Take it easy on me :) Even though I've worked on lots of personal projects, I'm still a beginner when it comes to professional work experience. Just wanted to let you know!
+        Hey, take it easy on me :) Even though I've worked on lots of personal projects, I'm still a beginner when it comes to professional work experience. Just wanted to let you know!
       </p>
 
       <div className="space-y-8">
