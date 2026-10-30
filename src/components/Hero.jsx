@@ -9,6 +9,7 @@ const Hero = () => {
     'Microservices', 'Docker/Kubernetes',
     'Flutter/Dart', 'Firebase',
     'Playwright', 'Cypress', 'Selenium',
+    'AI Development',
      'System Architecture'
   ]
 
@@ -44,12 +45,12 @@ const Hero = () => {
                 Wondwosen Asegid
               </h1>
               <h2 className="text-xl md:text-2xl font-medium text-gray-300 bg-gradient-to-r from-gray-300/20 to-transparent p-4 rounded-lg">
-                Software Developer & Systems Architecture Enthusiast
+                SDET, Backend Engineer & AI Developer
               </h2>
             </div>
 
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-            I'm a back-end software engineer and Computer Science student transforming complex requirements into scalable and efficient web and mobile solutions. I am really good at designing clean, maintainable APIs, optimizing database queries for peak performance, and writing clean code that is as reliable as it is efficient.
+            I work across backend engineering, test automation, and AI development, turning complex requirements into clean, scalable, and well-tested software. As a Computer Science student and practicing engineer, I focus on reliable APIs, efficient databases, and automated tests that catch problems before they reach users.
             </p>
 
             <div className="flex gap-4 justify-center md:justify-center lg:justify-start">
