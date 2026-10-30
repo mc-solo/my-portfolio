@@ -5,19 +5,19 @@ import { FiGithub, FiExternalLink, FiFileText } from 'react-icons/fi'
 
 const projects = [
   {
-    title: 'Multi-Tenant Rate-Limited REST API',
-    description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server.',
-    tech: ['PHP', 'Laravel', 'Redis', 'MySQL'],
-    languages: ['PHP'],
+    title: 'Go Multi-Tenant Rate-Limited REST API',
+    description: 'Rate-limits API requests on a per-tenant basis while supporting multiple tenants on the same server, built with Go for fast, concurrent request handling.',
+    tech: ['Go', 'Redis', 'PostgreSQL'],
+    languages: ['Go'],
     github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#'
   },
   {
-    title: 'Custom OAuth Server',
-    description: 'A custom OAuth server that provides a secure and scalable way to manage authentication and authorization for applications.',
-    tech: ['PHP', 'Laravel', 'Docker', 'MySQL', 'Laravel Passport', 'Laravel Socialite'],
-    languages: ['PHP'],
+    title: 'Go OAuth2 Authorization Server',
+    description: 'A custom OAuth2 server in Go that provides a secure and scalable way to manage authentication and authorization for applications.',
+    tech: ['Go', 'Docker', 'PostgreSQL', 'Redis'],
+    languages: ['Go'],
     github: 'https://github.com/mc-solo',
     demo: '#',
     docs: '#'
