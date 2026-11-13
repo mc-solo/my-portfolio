@@ -114,28 +114,7 @@ const Hero = () => {
         <div className="h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent" />
 
         {/* Details Section */}
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Background */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="space-y-6"
-          >
-            <h3 className="text-2xl font-semibold text-gray-100 flex items-center gap-3">
-              <span className="text-gray-300">#</span>
-              Personal Background
-            </h3>
-            <div className="space-y-4 text-gray-400">
-              <p className="leading-relaxed text-xl">
-                I was introduced to the world of coding in 2017, when I was in grade 9, and I met a weird and genius guy called Nazrawi Eyob, who introduced me to Java during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
-              </p>
-              <p className="leading-relaxed text-xl">
-                After I finished high school, I continued my education at Unity University, where I am now a third-year Computer Science student, expected to graduate in 2029. Determined to pursue my passion, I've since built an extensive portfolio of projects, focusing on practical development skills and innovative solutions.
-              </p>
-            </div>
-          </motion.div>
-
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Skills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
