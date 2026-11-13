@@ -17,13 +17,13 @@ const Experience = () => {
       role: 'Backend Engineer',
       company: 'Tewos Technology Solutions',
       duration: '2024 - 2025',
-      description: 'Designing and implementing scalable web and mobile applications, with a focus on clean backend architecture, reliable APIs, and efficient data handling.'
+      description: 'Designing and implementing scalable web and mobile applications, with a focus on clean backend architecture, reliable APIs, and efficient data handling. I also wrote unit and integration tests for backend projects, covering core business logic, API endpoints and service interactions.'
     },
     {
       role: 'Backend Developer & SDET',
       company: 'See Tech International',
       duration: '2025 - Present',
-      description: 'Building backend services and automated test coverage for web and mobile systems, with a focus on reliable APIs and regression testing.'
+      description: 'Building backend services and automated test coverage for web and mobile systems, with a focus on reliable APIs and regression testing. I analyse failure logs from CI runs to debug failed tests, distinguishing genuine product defects from test, data and environment issues, and I take part in pull request reviews, checking code changes for correctness, test coverage and regression risk before merge.'
     },
     {
       role: 'Backend Developer Intern',

@@ -8,7 +8,7 @@ const Hero = () => {
     'PostgreSQL', 'RESTful APIs', 'GraphQL',
     'Microservices', 'Docker/Kubernetes',
     'Flutter/Dart', 'Firebase',
-    'Playwright', 'Cypress', 'Selenium',
+    'Playwright', 'Cypress', 'Selenium', 'UFT',
     'AI Development',
      'System Architecture'
   ]
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
 
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-            I work across backend engineering, test automation, and AI development, turning complex requirements into clean, scalable, and well-tested software. As a Computer Science student and practicing engineer, I focus on reliable APIs, efficient databases, and automated tests that catch problems before they reach users.
+            I work across backend engineering, test automation, and AI development, turning complex requirements into clean, scalable, and well-tested software. As a third-year Computer Science student at Unity University and practicing engineer, I focus on reliable APIs, efficient databases, and automated tests that catch problems before they reach users.
             </p>
 
             <div className="flex gap-4 justify-center md:justify-center lg:justify-start">
@@ -131,7 +131,7 @@ const Hero = () => {
                 I was introduced to the world of coding in 2017, when I was in grade 9, and I met a weird and genius guy called Nazrawi Eyob, who introduced me to Java during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
               </p>
               <p className="leading-relaxed text-xl">
-                After I finished high school, I enrolled at Addis Ababa Science and Technology University, but ultimately left when I couldn't secure a place in the software engineering department. Determined to pursue my passion, I've since built an extensive portfolio of projects while continuing my education as a third-year Computer Science student, focusing on practical development skills and innovative solutions.
+                After I finished high school, I continued my education at Unity University, where I am now a third-year Computer Science student, expected to graduate in 2029. Determined to pursue my passion, I've since built an extensive portfolio of projects, focusing on practical development skills and innovative solutions.
               </p>
             </div>
           </motion.div>
@@ -148,7 +148,7 @@ const Hero = () => {
               My Technical Arsenal
             </h3>
             <p className="leading-relaxed text-gray-400 mb-4 text-xl">
-              I primarily focus on the logical components of projects, specializing in backend development where I excel at creating robust, scalable systems. While I have some experience with frontend technologies, my true passion lies in building the powerful engines that drive applications behind the scenes, bringing my backend solutions to life. I also build automated tests that catch regressions before they reach production.
+              I primarily focus on the logical components of projects, specializing in backend development where I excel at creating robust, scalable systems. While I have some experience with frontend technologies, my true passion lies in building the powerful engines that drive applications behind the scenes, bringing my backend solutions to life. I also build automated tests in Playwright with TypeScript and JavaScript, with some experience of the UFT keyword-driven model, that catch regressions before they reach production.
             </p>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (

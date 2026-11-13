@@ -69,7 +69,7 @@ const projects = [
   },
   {
     title: 'Playwright End-to-End Test Automation',
-    description: 'Automated end-to-end tests for web flows, covering user journeys, cross-browser checks, and repeatable regression coverage.',
+    description: 'Playwright (TypeScript and JavaScript) end-to-end tests for web flows, covering user journeys, cross-browser checks, and repeatable regression coverage.',
     tech: ['Playwright', 'JavaScript', 'TypeScript', 'E2E Testing'],
     languages: ['JavaScript'],
     github: 'https://github.com/mc-solo',
