@@ -72,6 +72,7 @@ const projects = [
     description: 'Playwright (TypeScript and JavaScript) end-to-end tests for web flows, covering user journeys, cross-browser checks, and repeatable regression coverage.',
     tech: ['Playwright', 'JavaScript', 'TypeScript', 'E2E Testing'],
     languages: ['JavaScript'],
+    category: 'Automated Tests',
     github: 'https://github.com/mc-solo/playwright-end-to-end-test-automation',
     demo: '#',
     docs: '#'
@@ -81,6 +82,7 @@ const projects = [
     description: 'Browser-based UI tests for critical flows, with readable test cases, reusable commands, and fast feedback during development.',
     tech: ['Cypress', 'JavaScript', 'E2E Testing'],
     languages: ['JavaScript'],
+    category: 'Automated Tests',
     github: 'https://github.com/mc-solo/cypress-ui-test-automation',
     demo: '#',
     docs: '#'
@@ -90,6 +92,7 @@ const projects = [
     description: 'A reusable Selenium WebDriver framework using the Page Object Model, with shared locators, test data handling, and cross-browser runs.',
     tech: ['Selenium', 'WebDriver', 'Python', 'Page Object Model'],
     languages: ['Python'],
+    category: 'Automated Tests',
     github: 'https://github.com/mc-solo/selenium-web-automation-framework',
     demo: '#',
     docs: '#'
@@ -99,6 +102,7 @@ const projects = [
     description: 'Automated tests for REST APIs, covering status codes, response schemas, authentication, and error cases for core endpoints.',
     tech: ['REST APIs', 'API Testing', 'JavaScript', 'JSON Schema'],
     languages: ['JavaScript'],
+    category: 'Automated Tests',
     github: 'https://github.com/mc-solo/api-testing-suite',
     demo: '#',
     docs: '#'
@@ -212,6 +216,11 @@ const Projects = () => {
       setFilteredProjects(projects);
       return;
     }
+
+    if (activeFilter === 'Automated Tests') {
+      setFilteredProjects(projects.filter(project => project.category === 'Automated Tests'));
+      return;
+    }
     
     const filtered = projects.filter(project => {
       return project.languages && project.languages.includes(activeFilter);
@@ -251,6 +260,12 @@ const Projects = () => {
               label="All Projects" 
               isActive={activeFilter === null} 
               onClick={() => setActiveFilter(null)} 
+            />
+            <FilterButton 
+              key="automated-tests"
+              label="Automated Tests" 
+              isActive={activeFilter === 'Automated Tests'} 
+              onClick={() => setActiveFilter('Automated Tests')} 
             />
             {languages.map(language => (
               <FilterButton 
