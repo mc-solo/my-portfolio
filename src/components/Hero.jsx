@@ -8,7 +8,7 @@ const Hero = () => {
     'PostgreSQL', 'RESTful APIs', 'GraphQL',
     'Microservices', 'Docker/Kubernetes',
     'Flutter/Dart', 'Firebase',
-    'Playwright', 'Cypress', 'Selenium',
+    'Playwright', 'Cypress', 'Selenium', 'UFT',
     'AI Development',
      'System Architecture'
   ]
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
 
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-            I work across backend engineering, test automation, and AI development, turning complex requirements into clean, scalable, and well-tested software. As a Computer Science student and practicing engineer, I focus on reliable APIs, efficient databases, and automated tests that catch problems before they reach users.
+            I work across backend engineering, test automation, and AI development, turning complex requirements into clean, scalable, and well-tested software. As a third-year Computer Science student at Unity University and practicing engineer, I focus on reliable APIs, efficient databases, and automated tests that catch problems before they reach users.
             </p>
 
             <div className="flex gap-4 justify-center md:justify-center lg:justify-start">
@@ -114,28 +114,7 @@ const Hero = () => {
         <div className="h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent" />
 
         {/* Details Section */}
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Background */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="space-y-6"
-          >
-            <h3 className="text-2xl font-semibold text-gray-100 flex items-center gap-3">
-              <span className="text-gray-300">#</span>
-              Personal Background
-            </h3>
-            <div className="space-y-4 text-gray-400">
-              <p className="leading-relaxed text-xl">
-                I was introduced to the world of coding in 2017, when I was in grade 9, and I met a weird and genius guy called Nazrawi Eyob, who introduced me to Java during school breaks. What began as lunchtime lessons quickly evolved into a serious passion, leading me to develop numerous projects throughout my high school years.
-              </p>
-              <p className="leading-relaxed text-xl">
-                After I finished high school, I enrolled at Addis Ababa Science and Technology University, but ultimately left when I couldn't secure a place in the software engineering department. Determined to pursue my passion, I've since built an extensive portfolio of projects while continuing my education as a third-year Computer Science student, focusing on practical development skills and innovative solutions.
-              </p>
-            </div>
-          </motion.div>
-
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Skills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -148,7 +127,7 @@ const Hero = () => {
               My Technical Arsenal
             </h3>
             <p className="leading-relaxed text-gray-400 mb-4 text-xl">
-              I primarily focus on the logical components of projects, specializing in backend development where I excel at creating robust, scalable systems. While I have some experience with frontend technologies, my true passion lies in building the powerful engines that drive applications behind the scenes, bringing my backend solutions to life. I also build automated tests that catch regressions before they reach production.
+              I primarily focus on the logical components of projects, specializing in backend development where I excel at creating robust, scalable systems. While I have some experience with frontend technologies, my true passion lies in building the powerful engines that drive applications behind the scenes, bringing my backend solutions to life. I also build automated tests in Playwright with TypeScript and JavaScript, with some experience of the UFT keyword-driven model, that catch regressions before they reach production.
             </p>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
